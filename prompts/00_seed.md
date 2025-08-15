@@ -8,7 +8,7 @@ Project context (standalone brief for the model)
 - Plausibility: Ground scenes in real hazards, tools, customs, and spaces of the period. Implied eerie is okay; explicit magic is not.
 - App schema: Episodes are JSON with `meta` and `nodes`; later steps will write pages at 5–8 sentences each.
 
-INPUT (choose one minimal path)
+INPUT (choose one path)
 - civ: e.g., "Ancient Egypt" (optional qualifiers: era/domain)
   optional_focus: e.g., "tombs", "river trade", "city streets at night"
 - or source_text:
@@ -16,11 +16,18 @@ INPUT (choose one minimal path)
     excerpt: |  # a few paragraphs copied from the history book
       ...
     grade: 5–6   # intended reading maturity (not displayed)
+- or concept:     # if you already have a rough concept
+    episode_title: ...
+    civ: ...
+    timeplace: ...
+    themes: [ ... ]
+    must_include: [ ... ]
+    avoid: [ ... ]
 
 TASKS
-1) Generate 3 distinct episode options that naturally lead to an adventure with tradeoffs (time vs. air/light, safety vs. progress, noise vs. stealth, etc.).
-2) Select the best option (or the one most representative of the input) and justify briefly.
-3) Produce a complete, actionable brief so downstream steps (beats/prose) can run without further invention.
+1) If given `civ` or `source_text`, propose 3 distinct episode options that naturally lead to an adventure with tradeoffs (time vs. air/light, safety vs. progress, noise vs. stealth, etc.). If given a `concept`, you may refine but keep its core intact; still provide 2 alternates to stress‑test the idea.
+2) Select the strongest option (or confirm the provided concept) and justify briefly.
+3) Produce a complete, actionable research_brief so beats/prose can run without further invention.
 
 OUTPUT (YAML with EXACT keys)
 options:                # three concise, distinct pitches
