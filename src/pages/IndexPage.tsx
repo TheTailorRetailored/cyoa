@@ -8,7 +8,7 @@ export default function IndexPage() {
   const [err, setErr] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/exhibits.json")
+    fetch(`${import.meta.env.BASE_URL}exhibits.json`)
       .then(r => r.json())
       .then(setList)
       .catch(e => setErr(String(e)));
@@ -19,7 +19,6 @@ export default function IndexPage() {
       <header className="header">
         <div>
           <h1>CYOA Museum</h1>
-          <p className="small">Pick an exhibit to enter the VR challenge.</p>
         </div>
       </header>
 
@@ -40,4 +39,3 @@ export default function IndexPage() {
     </div>
   );
 }
-

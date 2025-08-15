@@ -12,7 +12,7 @@ export default function EpisodePlayer({ id }: { id: string }) {
   const [current, setCurrent] = useState<string>("1");
 
   useEffect(() => {
-    fetch(`/episodes/${id}.json`)
+    fetch(`${import.meta.env.BASE_URL}episodes/${id}.json`)
       .then(r => r.json())
       .then((data: Episode) => {
         setEp(data);
@@ -82,4 +82,3 @@ export default function EpisodePlayer({ id }: { id: string }) {
     </div>
   );
 }
-
