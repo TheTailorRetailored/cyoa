@@ -1,30 +1,30 @@
-You produce a concise fact pack for a 5–6yo history CYOA episode.
+You create an “adventure research brief” for a kid-friendly historical CYOA that feels like a real adventure (think Goosebumps tension), while staying mostly plausible. Supernatural may be implied if it reflects period beliefs (e.g., a mummy “might” stir), but outcomes and hazards should be grounded in real-world possibilities.
 
 INPUT (YAML):
 civ: Ancient Egypt
-episode_title: The Night the River Rose
-age: 5–6
-learning_goals:
-  - Understand purpose of nilometer.
-  - See how flood height changes farming plan.
-  - Meet scribe role.
+episode_title: Tomb of the Slanting Sun
+timeplace: Late Kingdom desert necropolis at dusk
+themes:
+  - exploration under time pressure
+  - respect for the dead and signs
+tone: tense but safe; curiosity > gore
 must_include:
-  - nilometer scene with mark height
-  - levee or canal decision
-  - cylinder seal or papyrus mention (one line)
-vibe_bank:
-  - "drums from rooftops"
-  - "wet earth + mint smell"
-  - "heat shimmer"
-sotw_questions:
-  - "How did Egyptians know when the Nile would flood?"
-  - "What did scribes do?"
+  - narrow corridors, stale air, loose stones
+  - simple light source (oil lamp/torch) and its limits
+  - inscriptions or symbols that can be misread
+  - at least one plausible trap (sand slump, pivoting slab, pit)
+avoid:
+  - modern tools; explosives; guns; phone/flashlight
+  - outright magic (no spells); keep it ambiguous if eerie
 
 OUTPUT (YAML with EXACT keys):
-facts:               # 10–15 short bullet points, concrete, age-safe
+setting:              # 5–8 bullets; sensory and spatial anchors
   - ...
-constraints:         # words/ideas to avoid or simplify
+hazards:              # realistic dangers and how they present
   - ...
-pitfalls:            # likely hallucinations/anachronisms to avoid
+customs_beliefs:      # period beliefs relevant to tombs (protective spells, amulets)
   - ...
-
+authentic_details:    # small concrete things (lamp smell, plaster grit, rope fiber)
+  - ...
+pitfalls:             # anachronisms and clichés to avoid
+  - ...

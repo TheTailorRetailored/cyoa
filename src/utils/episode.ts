@@ -25,9 +25,9 @@ export function validateEpisode(ep: Episode): string[] {
       }
     }
   }
-  // depth heuristic (DFS limited)
+  // Keep depth calculation for diagnostics only (no hard warning threshold)
   const depth = estimateDepth(m, start, new Set());
-  if (depth < 3 || depth > 7) msgs.push(`Depth looks odd: ${depth} (expected 3–7)`);
+  if (depth < 2) msgs.push(`Very shallow depth: ${depth}`);
   return msgs;
 }
 
@@ -43,4 +43,3 @@ function estimateDepth(m: Map<string, Node>, id: string, seen: Set<string>): num
   }
   return best;
 }
-

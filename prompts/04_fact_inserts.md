@@ -1,7 +1,8 @@
-Fill `fact` (<=18 words) and `question` (short causal prompt) ONLY where `fact_slot` or `question_slot` are true, using ONLY <FACTS>. Then REMOVE the *_slot fields.
+Remove any leftover scaffolding keys from earlier steps and polish the prose for flow and clarity. Replace any placeholders with plain text. Ensure no meta/planning keys remain other than `nodes`, `endings`, and their nested fields (`id`, `text`, `choices[{label,to}]`).
 
-OUTPUT: same JSON shape (nodes + endings) with `fact`/`question` filled where appropriate.
+Checklist:
+- Remove helper keys like `scene`, `notes`, or slots.
+- Ensure every non-ending node has exactly 2 choices.
+- Endings must have no `choices` array.
 
-<FACTS>
-(Insert the `facts` list from the fact pack)
-
+OUTPUT: final adventure JSON for the episode.

@@ -61,8 +61,6 @@ export default function EpisodePlayer({ id }: { id: string }) {
           <article className="page">
             <p className="small page-label">{node.id.startsWith("end:") ? "Ending" : `Page ${node.id}`}</p>
             <p className="page-text">{replaceName(node.text, "")}</p>
-            {node.fact && <p className="fact"><strong>Spot the fact:</strong> {node.fact}</p>}
-            {node.question && <p className="q"><strong>Think it through:</strong> {node.question}</p>}
           </article>
         </div>
       </main>

@@ -1,8 +1,8 @@
-Turn the beat JSON into prose for kids (5–6). Style: 2nd person, present tense, 2–4 sentences per node, one or two sensory words per node, age-safe peril. Use a `{name}` placeholder naturally ("You ({name}) ..."), but text MUST read cleanly if name is blank.
+Turn the beats into immersive prose. Style: second person, present tense, 5–8 sentences per node. Use vivid but age-safe tension; 1–2 sensory cues per node. Keep things plausible. Implied supernatural (a shadow that “might” move, a faint rustle) is allowed if it reflects beliefs.
 
-Keep ids and choices; DO NOT add new nodes or endings. Do NOT add new facts; just write scene text and improve choices to be concrete actions.
+Rules:
+- Keep ids and choices; do not add nodes or endings.
+- Do not add didactic fact callouts. Integrate detail naturally.
+- Make choices concrete, distinct, and rooted in the scene’s constraints.
 
-If the node has `fact_slot` or `question_slot`, leave them in place; they will be filled later.
-
-OUTPUT: the same JSON shape with a `text` field for every node and polished `choices[].label`. Keep `fact_slot` / `question_slot` flags unchanged.
-
+OUTPUT: same JSON shape adding a `text` field for every node and refined `choices[].label`.

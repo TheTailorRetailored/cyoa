@@ -1,25 +1,21 @@
-You generate a branching map for a 5–6yo CYOA episode. Depth 4–5, about 10–12 nodes, two mid-path convergences, two endings end:A/end:B.
+You design an adventure flow for a tense, plausible tomb-exploration story. The reader can reach multiple endings, including at least one “bad end” (sealed in, lost light) and one “good end” (escape with insight, not treasure).
 
 RULES:
-- Use ONLY facts provided in <FACTS>.
-- Each node has exactly 2 choices (except endings).
-- Place exactly 3 `fact_slot: true` and 2 `question_slot: true` on nodes where scene naturally teaches.
-- Use ids "1","2",...; endings as "end:A","end:B". If museum_intro is true, also include "intro" -> "1".
+- Keep everything physically plausible; implied eerie moments are fine if rooted in beliefs.
+- Exactly 2 choices per non-ending node.
+- Depth target 6–8; total nodes 12–16 including 2–4 endings.
+- Use ids "1","2",...; endings as "end:GOOD1", "end:BAD1", etc. If `meta.museum_intro` is true, include "intro" -> "1".
+- Choices should be concrete actions with tradeoffs (time vs. safety, light vs. air, noise vs. stealth).
 
 OUTPUT (JSON):
 {
   "nodes": [
-    { "id":"1", "scene":"one or two lines of what happens", "choices":[
+    { "id":"1", "scene":"1–2 lines of what happens and the immediate dilemma", "choices":[
       {"label":"choice text","to":"2"},
-      {"label":"choice text","to":"3"}],
-      "fact_slot":true, "question_slot":true
-    },
+      {"label":"choice text","to":"3"}
+    ]},
     ...
   ],
-  "endings":[ {"id":"end:A","title":"..."},{"id":"end:B","title":"..."} ],
-  "warnings":[ "...optional..." ]
+  "endings":[ {"id":"end:GOOD1","title":"..."}, {"id":"end:BAD1","title":"..."} ],
+  "notes":[ "optional structural notes or cautions" ]
 }
-
-<FACTS>
-(Insert the `facts` list from the fact pack)
-
