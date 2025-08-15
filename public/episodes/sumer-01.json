@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "id": "sumer-01",
+    "title": "The Day of the Tablet",
+    "civ": "Sumer",
+    "age": "5–6",
+    "big_ideas": ["Cuneiform","Rations","Cylinder seals"],
+    "museum_intro": false
+  },
+  "nodes": [
+    {
+      "id": "1",
+      "text": "Morning in Ur. Your father hands you a lump of clay to deliver to the school. Temple bells ring.",
+      "choices": [
+        { "label": "Go straight to the school", "to": "2" },
+        { "label": "Watch the barge unload reeds", "to": "3" }
+      ]
+    },
+    {
+      "id": "2",
+      "text": "Inside the edubba, boys press reeds into clay. A scribe watches.",
+      "fact": "Cuneiform signs were pressed into clay with a reed stylus.",
+      "choices": [
+        { "label": "Ask to try one sign", "to": "4" },
+        { "label": "Peek at the tablet shelf", "to": "5" }
+      ]
+    },
+    {
+      "id": "3",
+      "text": "Workers shout. The river is low; the barge scrapes in.",
+      "choices": [
+        { "label": "Help push the barge", "to": "2" },
+        { "label": "Hurry to school", "to": "2" }
+      ]
+    },
+    {
+      "id": "4",
+      "text": "You press the sign for grain. It looks like a wedge of bread.",
+      "choices": [
+        { "label": "Make a neat tablet for Father", "to": "end:A" },
+        { "label": "Ask what the sign is used for", "to": "5" }
+      ]
+    },
+    {
+      "id": "5",
+      "text": "\"Rations,\" says the scribe. \"Tablets help us share fairly.\" He offers a cylinder seal.",
+      "fact": "Cylinder seals rolled tiny pictures into clay like signatures.",
+      "choices": [
+        { "label": "Press the seal, then head home", "to": "end:A" },
+        { "label": "Ask why grain matters", "to": "end:B" }
+      ]
+    },
+    {
+      "id": "end:A",
+      "text": "Your tablet is neat. The scribe nods. At home, Father smiles and sets it on a shelf.",
+      "question": "How did writing help the city share rations?"
+    },
+    {
+      "id": "end:B",
+      "text": "\"Grain feeds workers,\" the scribe says. \"Tablets stop fights.\" You carry the clay lump home, thinking.",
+      "question": "What problem did writing solve today?"
+    }
+  ]
+}
+

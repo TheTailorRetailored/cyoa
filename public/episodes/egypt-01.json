@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "id": "egypt-01",
+    "title": "The Night the River Rose",
+    "civ": "Ancient Egypt",
+    "age": "5–6",
+    "big_ideas": ["Nilometer","Flood cycles","Scribes","Grain storage"],
+    "museum_intro": true
+  },
+  "nodes": [
+    {
+      "id": "intro",
+      "text": "The new WorldTime Museum hums like a beehive. A guide taps the VR pod: \"Win three tickets, and you unlock the Hidden Wing.\" You ({name}) slip on the headset… the smell of wet earth and mint rushes in.",
+      "choices": [ { "label": "Begin the Egypt challenge", "to": "1" } ]
+    },
+    {
+      "id": "1",
+      "text": "Drums thump. The Nile creeps up the steps. Mother ties a reed cord on your wrist: \"Check the marker. Then run.\"",
+      "fact": "Flood markers (nilometers) showed how high the river rose.",
+      "question": "Why would a higher flood change the plan?",
+      "choices": [
+        { "label": "Take the dry wall path", "to": "2" },
+        { "label": "Cut through the reeds", "to": "3" }
+      ]
+    },
+    {
+      "id": "2",
+      "text": "Cracks web the mud wall. Water noses at them.",
+      "choices": [
+        { "label": "Patch the crack now", "to": "4" },
+        { "label": "Call elders first", "to": "5" }
+      ]
+    },
+    {
+      "id": "3",
+      "text": "Reeds hiss. Two eyes glide in the black water. A stone cylinder seal lies by your foot.",
+      "fact": "Cylinder seals pressed pictures into clay like a signature.",
+      "choices": [
+        { "label": "Keep the seal; mark first", "to": "6" },
+        { "label": "Find the owner", "to": "5" }
+      ]
+    },
+    {
+      "id": "4",
+      "text": "You press warm clay into the crack. The leak sulks smaller. Time is dripping too.",
+      "choices": [
+        { "label": "Run to the marker", "to": "6" },
+        { "label": "Shout for help", "to": "5" }
+      ]
+    },
+    {
+      "id": "5",
+      "text": "Elders and a temple runner jog beside you. \"Marker first; no numbers, no plan.\"",
+      "choices": [
+        { "label": "Argue 'wall first'", "to": "4" },
+        { "label": "Go with them", "to": "6" }
+      ]
+    },
+    {
+      "id": "6",
+      "text": "Stone steps. Carved lines climb a pillar. Water slaps the fourth notch.",
+      "choices": [
+        { "label": "Carve today's line now", "to": "end:A" },
+        { "label": "Fetch the scribe to witness", "to": "end:B" }
+      ]
+    },
+    {
+      "id": "end:A",
+      "text": "You press the reed into stone before the Nile can swallow the mark. Drums flip to the \"store grain\" beat. Back at the museum, the guide grins and drops three golden tickets in your hand.",
+      "fact": "Measured floods told villages when to plant and how much grain to store."
+    },
+    {
+      "id": "end:B",
+      "text": "You sprint for the scribe. He measures, scratches the pillar, and nods. \"Good thinking.\" In the museum, your visor lifts. Two tickets clink into your palm—and an extra if you can tell one fact you learned.",
+      "fact": "Scribes recorded flood levels so the whole village could agree on a plan."
+    }
+  ]
+}
+
